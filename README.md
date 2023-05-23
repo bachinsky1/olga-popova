@@ -21,6 +21,7 @@
 
 # Solution
 Для першого запуску запустіть наступні команди
+
 `cd blog` 
 
 `cp .env.example .env`
