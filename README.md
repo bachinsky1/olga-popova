@@ -40,6 +40,19 @@
 `php artisan db:seed`
 
 Перейдіть на сторінку `http://localhost`
+![image](https://github.com/bachinsky1/olga-popova/assets/24652722/103df425-28f3-466e-bb68-8eb4fe6206e1)
+
+Для того щоб з'явилась можливість управління постами необхідно авторизуватись. Клікніть Login
+![image](https://github.com/bachinsky1/olga-popova/assets/24652722/edb021d9-5b53-4d8e-9b97-c6df9495a8f1)
+Користувач - admin@admin.com
+
+Пароль - password
+
+Авторизуйтесь, та скористайтесь лінками Edit, Delete та Add post
+![image](https://github.com/bachinsky1/olga-popova/assets/24652722/c38b61bc-8caa-45c6-a2d8-c1ebfd73b9d6)
+
+Також внизу є кнопки пагінації
+![image](https://github.com/bachinsky1/olga-popova/assets/24652722/bf2bed43-aacd-43c7-8fad-9639939569d1)
 
 
 
