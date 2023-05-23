@@ -6,9 +6,9 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="post-heading">
                     <h1>{{ $post->title}}</h1>
-                    <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+                    <h2 class="subheading">{{ __('Place for second header') }}</h2>
                     <span class="meta">
-                        Posted on {{ $post->created_at}}
+                    {{ __('Posted on') }}
                     </span>
                 </div>
             </div>

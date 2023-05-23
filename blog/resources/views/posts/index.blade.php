@@ -6,8 +6,8 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
-                    <h1>My Super Blog</h1>
-                    <span class="subheading">A Blog Theme</span>
+                    <h1>{{ __('My Super Blog') }}</h1>
+                    <span class="subheading">{{ __('A Blog Theme') }}</span>
                 </div>
             </div>
         </div>
@@ -32,14 +32,18 @@
                     <h3 class="post-subtitle">{{$post->decription}}</h3>
                 </a>
                 <p class="post-meta">
-                    Posted on {{$post->created_at}}
+                {{ trans('Posted on') }} {{$post->created_at}}
                 </p>
                 @auth
-                <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}" role="button">Edit</a>
-                <form action="{{ route('posts.destroy',$post->id) }}" method="POST" onsubmit="return confirm('{{ trans('are You Sure ? ') }}');" style="display: inline-block;">
+                <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}" role="button">{{ __('Edit') }}</a>
+                <form 
+                    action="{{ route('posts.destroy',$post->id) }}" 
+                    method="POST" 
+                    onsubmit="return confirm('{{ trans('Are You Sure ? ') }}');" 
+                    style="display: inline-block;">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <button type="submit" class="btn btn-warning">Delete</button>
+                    <button type="submit" class="btn btn-warning">{{ __('Delete') }}</button>
                 </form>
                 @endauth
             </div>
@@ -48,8 +52,8 @@
             @endforeach
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a class="btn btn-primary me-md-2" href="{{ $posts->previousPageUrl() }}">← Younger Posts</a>
-                <a class="btn btn-primary" href="{{ $posts->nextPageUrl() }}">Older Posts →</a>
+                <a class="btn btn-primary me-md-2" href="{{ $posts->previousPageUrl() }}">{{ __('← Younger Posts') }}</a>
+                <a class="btn btn-primary" href="{{ $posts->nextPageUrl() }}">{{ __('Older Posts →') }}</a>
             </div>
         </div>
     </div>

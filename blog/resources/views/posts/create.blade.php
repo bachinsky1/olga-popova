@@ -8,7 +8,7 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="page-heading">
                     <h1>{{ __('Post Edit') }}</h1>
-                    <span class="subheading">Edit post here</span>
+                    <span class="subheading">{{ __('Edit post here') }}</span>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                                 data-sb-can-submit="no" 
                                 value="{{old('title')}}" 
                                 >
-                            <label for="title">Title</label>
+                            <label for="title">{{ __('Title') }}</label>
                             @error('title')
                             <div class="text-sm text-red-600">{{ $message }}</div>
                             @enderror
@@ -58,7 +58,7 @@
                         <br>
 
                         <!-- Submit Button-->
-                        <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
+                        <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">{{ __('Send') }}</button>
                     </form>
                 </div>
             </div>
