@@ -22,12 +22,24 @@
 # Solution
 Для першого запуску запустіть наступні команди
 `cd blog` 
+
 `cp .env.example .env`
+
 `npm install`
+
 `composer install` 
+
 `npm run build`
+
 `docker compose up --build -d`
+
 Після запуска контейнерів почекайте 20 секунд і запустіть міграції і сідер
+
 `php artisan migrate`
+
 `php artisan db:seed`
+
+Перейдіть на сторінку `http://localhost`
+
+
 
