@@ -8,21 +8,27 @@
     <meta name="author" content="bachinsky1@gmail.com" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Test Task') }}</title>
-    <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    @auth
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    @endauth
+    <!-- Font Awesome icons (free version)-->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
+
     <div id="app">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="{{ route('posts.index') }}">{{ config('app.name', 'Test Task') }}</a>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
+                {{ __('Menu') }}
                     <i class="fas fa-bars"></i>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                        
@@ -61,34 +67,15 @@
                             </div>
                         </li>
                         @endguest
-
                     </ul>
                 </div>
             </div>
         </nav>
-
-
-
-        
-
         @yield('list')
         @yield('post')
         @yield('content')
         @yield('create')
-        @yield('edit')
-        <!-- <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    @if (session()->has('status'))
-                        <div x-data="{ showMessage: true }" x-show="showMessage" class="alert alert-primary alert-dismissible fade show" role="alert">
-                            {{ session()->get('status') }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
-                    @yield('content')
-                </div>
-            </div>
-        </div> -->
+        @yield('edit') 
     </div>
 
 </body>

@@ -14,7 +14,7 @@
     </div>
 </header>
 
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
 <main class="mb-4">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -35,7 +35,7 @@
                                 value="{{old('title', $post->title)}}"
                                 required
                                 >
-                            <label for="title">Title</label>
+                            <label for="title">{{ __('Title') }}</label>
                             @error('title')
                             <div class="text-sm text-red-600">{{ $message }}</div>
                             @enderror
@@ -52,7 +52,7 @@
                                 required
                                 
                                 >{{ $post->description}}</textarea>
-                            <label for="description">Description</label>
+                            <label for="description">{{ __('Description') }}</label>
                             @error('description')
                             <div class="text-sm text-red-600">{{ $message }}</div>
                             @enderror
@@ -67,6 +67,7 @@
         </div>
     </div>
 </main>
+
 <script>
   tinymce.init({
     selector: 'textarea#description'
