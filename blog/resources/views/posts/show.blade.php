@@ -8,7 +8,7 @@
                     <h1>{{ $post->title}}</h1>
                     <h2 class="subheading">{{ __('Place for second header') }}</h2>
                     <span class="meta">
-                    {{ __('Posted on') }}
+                    {{ __('Posted on') }} {{ $post->created_at}}
                     </span>
                 </div>
             </div>
