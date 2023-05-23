@@ -40,6 +40,8 @@
 
 `php artisan db:seed`
 
+Запустіть тест `php artisan test --filter PostControllerTest`
+
 Перейдіть на сторінку `http://localhost`
 ![image](https://github.com/bachinsky1/olga-popova/assets/24652722/103df425-28f3-466e-bb68-8eb4fe6206e1)
 
